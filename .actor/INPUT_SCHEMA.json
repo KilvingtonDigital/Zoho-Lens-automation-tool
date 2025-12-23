@@ -6,7 +6,8 @@
         "ZOHO_EMAIL": {
             "title": "Zoho Email",
             "type": "string",
-            "description": "Email for Zoho Login"
+            "description": "Email for Zoho Login",
+            "editor": "textfield"
         },
         "ZOHO_PASSWORD": {
             "title": "Zoho Password",
@@ -18,7 +19,8 @@
             "title": "Customer Name",
             "type": "string",
             "description": "Name of the customer for the session",
-            "default": "Valued Customer"
+            "default": "Valued Customer",
+            "editor": "textfield"
         }
     },
     "required": [
