@@ -3,6 +3,6 @@
     "name": "zoho-lens-actor",
     "title": "Zoho Lens Session Creator",
     "version": "1.0.0",
-    "input": "./.actor/INPUT_SCHEMA.json",
-    "dockerfile": "./Dockerfile"
+    "input": "./INPUT_SCHEMA.json",
+    "dockerfile": "../Dockerfile"
 }
