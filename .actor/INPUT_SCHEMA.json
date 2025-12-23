@@ -13,7 +13,8 @@
             "title": "Zoho Password",
             "type": "string",
             "description": "Password for Zoho Login",
-            "editor": "password"
+            "editor": "textfield",
+            "isSecret": true
         },
         "CUSTOMER_NAME": {
             "title": "Customer Name",
