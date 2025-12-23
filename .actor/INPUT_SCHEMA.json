@@ -1,30 +1,28 @@
 {
     "title": "Zoho Lens Automation Input",
     "type": "object",
-    "schema": {
-        "properties": {
-            "ZOHO_EMAIL": {
-                "title": "Zoho Email",
-                "type": "string",
-                "description": "Email for Zoho Login"
-            },
-            "ZOHO_PASSWORD": {
-                "title": "Zoho Password",
-                "type": "string",
-                "description": "Password for Zoho Login",
-                "editor": "password"
-            },
-            "CUSTOMER_NAME": {
-                "title": "Customer Name",
-                "type": "string",
-                "description": "Name of the customer for the session",
-                "default": "Valued Customer"
-            }
+    "properties": {
+        "ZOHO_EMAIL": {
+            "title": "Zoho Email",
+            "type": "string",
+            "description": "Email for Zoho Login"
         },
-        "required": [
-            "ZOHO_EMAIL",
-            "ZOHO_PASSWORD",
-            "CUSTOMER_NAME"
-        ]
-    }
+        "ZOHO_PASSWORD": {
+            "title": "Zoho Password",
+            "type": "string",
+            "description": "Password for Zoho Login",
+            "editor": "password"
+        },
+        "CUSTOMER_NAME": {
+            "title": "Customer Name",
+            "type": "string",
+            "description": "Name of the customer for the session",
+            "default": "Valued Customer"
+        }
+    },
+    "required": [
+        "ZOHO_EMAIL",
+        "ZOHO_PASSWORD",
+        "CUSTOMER_NAME"
+    ]
 }
