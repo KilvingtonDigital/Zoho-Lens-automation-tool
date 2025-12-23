@@ -76,7 +76,8 @@ async def main():
                 link_selector = "#inviteCustomer_JoinUrl"
                 
                 try:
-                    await session_page.wait_for_selector(link_selector, timeout=60000)
+                    # Wait for attached state (it might be visually hidden but present in DOM)
+                    await session_page.wait_for_selector(link_selector, state='attached', timeout=60000)
                     join_url = await session_page.inner_text(link_selector)
                     join_url = join_url.strip()
                     
@@ -88,13 +89,17 @@ async def main():
                         
                 except Exception as e:
                    await session_page.screenshot(path="link_error.png")
-                   with open("link_error.png", "rb") as f:
-                        await Actor.set_value("link_error.png", f.read(), content_type="image/png")
+                   # Check if we can save the screenshot
+                   try:
+                       with open("link_error.png", "rb") as f:
+                            await Actor.set_value("link_error.png", f.read(), content_type="image/png")
+                   except Exception:
+                       pass
                    raise e
 
             except Exception as e:
                 Actor.log.error(f"Run failed: {e}")
-                await Actor.fail_run(str(e))
+                await Actor.fail(str(e))
             finally:
                 await browser.close()
 
