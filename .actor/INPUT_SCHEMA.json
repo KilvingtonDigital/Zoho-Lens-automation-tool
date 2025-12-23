@@ -1,5 +1,6 @@
 {
     "title": "Zoho Lens Automation Input",
+    "schemaVersion": 1,
     "type": "object",
     "properties": {
         "ZOHO_EMAIL": {
