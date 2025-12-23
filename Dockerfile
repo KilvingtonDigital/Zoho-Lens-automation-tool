@@ -1,0 +1,8 @@
+FROM apify/actor-python-playwright:3.11
+
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+
+COPY . ./
+
+CMD ["python3", "main.py"]
